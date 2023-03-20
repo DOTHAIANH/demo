@@ -1,0 +1,258 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	/* font-size: 100%; */
+	/* font: inherit; */
+	/* vertical-align: baseline; */
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	font-family: "Montserrat","HelveticaNeue","Helvetica Neue",sans-serif;
+}
+ul {
+	list-style: none outside;
+}
+ol, ul {
+	padding-left: 0 !important;
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+	text-decoration: none !important;
+	color: #000;
+    transition: all 300ms ease-in-out;
+}
+
+strong {
+	font-weight: bold;
+}
+
+h1 {
+    font-size: 2.25em;
+    margin: 0.67em 0 0.5em;
+    line-height: 1.25;
+    letter-spacing: -.02em;
+}
+
+h2 {
+	font-size: 1.75em;
+    margin: 0.83em 0 0.5em;
+    line-height: 1.35;
+}
+
+em, i {
+    font-style: italic;
+}
+
+section {
+	margin-bottom: 50px;
+}
+
+
+body, input, textarea, select, .chosen-container-single .chosen-single, .btn, .button {
+    font-family: "Open Sans",Helvetica,Arial,sans-serif;
+}
+
+.menu-sidebar .title_menu-sidebar {
+    color: #0083ca;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: left;
+    line-height: 45px;
+    font-weight: bold;
+    border-bottom: 2px solid #0083ca;
+}
+
+.menu-sidebar .menu {
+    border-radius: 5px;
+    background: #f7f7f7;
+}
+
+.menu-sidebar .menu_danh-muc ul li {
+    position: relative;
+    list-style: none;
+    padding: 0 10px;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+.menu-sidebar .menu_danh-muc ul li a {
+    font-size: 13px;
+    padding: 10px 0px;
+    display: block;
+    font-weight: 500;
+    color: #000;
+}
+
+.list_theme .box {
+    transition: all 0.4s linear;
+    position: relative;
+    padding: 0;
+    border-radius: 3px;
+    background: #f7f7f7;
+    box-shadow: 0 0 4px 1px #d6d0d0;
+    overflow: hidden;
+}
+
+.box .thumbnail {
+    height: 425px;
+    overflow: hidden;
+}
+
+.box .thumbnail a img {
+    width: 100%;
+    height: auto;
+}
+
+.list_theme .box:hover .hover-post {
+    opacity: 1;
+}
+
+.list_theme .box .hover-post {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url(https://webrt.vn/wp-content/themes/RT/assets/css/images/bg.png)bottom center no-repeat;
+    background-size: cover;
+    opacity: 0;
+    -webkit-transition: .4s ease-out;
+    -moz-transition: .4s ease-out;
+    -o-transition: .4s ease-out;
+    transition: .4s ease-out;
+}
+
+.list_theme .box .hover-post .hover-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+}
+
+.list_theme .box .hover-post .title {
+    color: #fff;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    line-height: 35px;
+    font-weight: 600;
+}
+
+.cat-themes {
+    text-align: center;
+}
+
+.cat-themes span {
+    color: #fff;
+    font-size: 17px;
+    line-height: 30px;
+    font-family: "Arial";
+}
+
+.price {
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+    text-align: center;
+    font-size: 21px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.box__views__pro {
+    overflow: hidden;
+    padding: 25px 10px 0;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list_theme .box .hover-post .view-demo {
+    -webkit-transition: .4s ease-out;
+    -moz-transition: .4s ease-out;
+    -o-transition: .4s ease-out;
+    transition: .4s ease-out;
+    width: 97px;
+    height: 34px;
+    line-height: 34px;
+    background: #ffb607;
+    color: #000;
+    float: left;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+}
+
+.list_theme .box .hover-post .view-all {
+    background: #50a6e9;
+    font-size: 15px;
+    width: 107px;
+    color: #fff;
+    line-height: 34px;
+    height: 34px;
+    float: left;
+    text-align: center;
+    -webkit-transition: .4s ease-out;
+    -moz-transition: .4s ease-out;
+    -o-transition: .4s ease-out;
+    transition: .4s ease-out;
+    font-family: 'Oswald', sans-serif;
+}
+
+.list_theme .box .hover-post a {
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.box__views__pro a {
+    margin: 0 3px;
+}
+
+.mgt-105 {
+    margin-top: 105px;
+}
+
+.box {
+    margin-bottom: 23px;
+}
+
+.mgt-50 {
+    margin-top: 50px;
+}
+
+.mgt-55 {
+    margin-top: 55px;
+}

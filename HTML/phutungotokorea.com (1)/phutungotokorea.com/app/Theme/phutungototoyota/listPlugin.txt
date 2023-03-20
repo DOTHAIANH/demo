@@ -1,0 +1,10 @@
+1. allSEO
+2. contact
+3. facebook
+4. linkWeb
+5. product
+6. sliderBanner
+7. static
+8. subiz
+9. yahooSkypeSupport
+10. popupHome

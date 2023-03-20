@@ -1,0 +1,804 @@
+<!doctype html>
+<html lang="vi">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	
+	<script type="text/javascript" src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <title>Đồ Án Kì I</title>
+</head>
+<body>
+
+	<header>
+		<div class="mask_mobi"></div>
+		<div class="navigation-wrap bg-light start-header start-style pd-sm-15">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<nav class="navbar navbar-expand-md navbar-light">
+
+							<a class="navbar-brand" href="/"><img src="" alt=""></a>	
+
+							<div class="d-block d-xl-none d-lg-none showOnMobile">
+								<div class="menuIcon d-flex">
+									
+									<a href="/combo"><img src="" alt="" class="img-fluid"></a>
+									
+									<a class="cart_position" href="javascript:void(0);" data-toggle="modal" data-target="#mobileCart"><img src="" alt="" class="img-fluid"><i class="countCart numberCart">0</i></a>
+									
+									<a href="/allProduct"><img src="" alt="" class="img-fluid"></a>
+									
+																			<a href="javascript:void(0);" data-toggle="modal" data-target="#loginForm"><img src="" alt="" class="img-fluid"></a>
+																	</div>
+							</div>
+
+							<button class="btn_mobi_r btn_mobi_show" type="button" aria-expanded="false">
+								<span class="btn_mobi_tg"></span>
+							</button>
+							<div class="collapse navbar-collapse" id="menutop">
+								<ul class="navbar-nav ml-auto py-4 py-md-0">
+                                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 item-position-relative">
+                                        <a class="nav-link" href="/allProduct">SẢN PHẨM</a>
+                                    </li>
+                                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 item-position-relative">
+                                        <a class="nav-link" href="/combo">COMBO</a>
+                                    </li>
+                                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 item-position-relative">
+                                        <a class="nav-link" href="/tin-tuc-1.html">TIN TỨC</a>
+                                    </li>
+                                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 item-position-relative">
+                                        <a class="nav-link" href="" data-toggle="modal" data-target="#mobileCart">GIỎ HÀNG</a>
+                                    </li>
+                                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 item-position-relative">
+                                        <a class="nav-link" href="/contact">LIÊN HỆ</a>
+                                    </li>
+                                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                        <a class="nav-link" href="javascript:void(0);" data-toggle="modal" data-target="#loginForm">ĐĂNG NHẬP / ĐĂNG KÝ</a>
+                                    </li>
+								</ul>
+							</div>
+							
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="d-block d-xl-none d-lg-none mobileMenu">
+			<div class="">
+				<ul class="list-unstyled">
+					<li data-toggle="collapse" data-target="#submobi1">
+                        <a href="/allProduct"><img src="" alt="">MENU</a>
+                    </li>
+                    <li data-toggle="collapse" data-target="#submobi2">
+                        <a href="/combo"><img src="" alt="">COMBO</a>
+                    </li>
+                    <li data-toggle="collapse" data-target="#submobi3">
+                        <a href="/tin-tuc-1.html"><img src="" alt="">TIN TỨC</a>
+                    </li>
+                    <li data-toggle="collapse" data-target="#submobi4">
+                        <a href="/khuyen-mai-1.html"><img src="" alt="">KHUYẾN MẠI</a>
+                    </li>
+                    <li data-toggle="collapse" data-target="#submobi6">
+                        <a href="/ve-chung-toi.html"><img src="" alt="">VỀ CHÚNG TÔI</a>
+                    </li>								
+				</ul>
+			</div>
+		</div>
+	</header><style>
+	
+#tab_Product1 > div.row > div,#tab_Product2 > div.row > div,#tab_Product3 > div.row > div {
+    padding-top: 0;
+}
+.productBought {
+    min-height: 170px;
+    max-height: 500px;
+    overflow: auto;
+}
+.sidebar {
+    margin-left: -15px;
+    position: unset;
+    width: calc(100% + 30px);
+}
+
+.quickMenu li.active a {
+    color: inherit;
+    border: none;
+}
+
+.quickMenu li.active a.active {
+    color: #057a92;
+    border-bottom: 2px solid;
+
+}
+
+.productBought::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+.productBought::-webkit-scrollbar {
+    width: 10px;
+    background-color: #F5F5F5;
+}
+
+.productBought::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #D62929;
+    background-image: -webkit-linear-gradient(90deg,
+                                          transparent,
+                                          rgba(0, 0, 0, 0.4) 50%,
+                                          transparent,
+                                          transparent)
+}
+
+.page-pagination > ul{
+    margin-bottom: 0;
+    padding-left: 0;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.page-pagination > ul li{
+    margin: 2px 4px;
+}
+.page-pagination > ul li a{
+    display: inline-block;
+    padding: 2px 10px;
+    background-color: #7cab41;
+    color: #fff;
+    border-radius: 4px;
+}
+.page-pagination > ul li a.active{
+    background-color: #fff;
+    color: #7cab41;
+    border: 1px solid #7cab41;
+}
+
+
+#productSlider1 > div,#productSlider2 > div,#productSlider3 > div {
+	margin-bottom: 25px;
+}
+
+.my_none {
+	padding: 40px 20px!important;
+}
+</style>
+<section class="slider">
+	<div class="container banner_mobi">
+		<div class="carousel">
+				<div class="slide">
+					<a href=""><img src="" class="img-fluid"></a>
+					<a href="" class="button-slide">Xem chi tiết</a>
+				</div>
+				<div class="slide">
+					<a href=""><img src="" class="img-fluid"></a>
+					<a href="" class="button-slide">Xem chi tiết</a>
+				</div>
+				<div class="slide">
+					<a href=""><img src="" class="img-fluid"></a>
+					<a href="" class="button-slide">Xem chi tiết</a>
+				</div>
+		</div>
+	</div>
+</section>
+
+<section id="quickLink" class="my_none">
+	<!-- ::::::  Start  Product Style - Catagory Section  ::::::  -->
+        <div class="product m-t-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                         <!-- Start Section Title -->
+                        <div class="section-content section-content--border m-b-35 my_pd_15 text_mb_center">
+                            <div class="section-content__title my_text_up">Danh mục</div>
+                        </div>  <!-- End Section Title -->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="product__catagory">
+                            <!-- Start Single catagory Product -->
+                            <div class="product__catagory--single">
+                                <div class="product__img-box product__img-box--catagory my_h_150 my_w_100">
+                                    <a href="/cat/tai-nghe.html" class="product__img--link">
+                                        <img class="product__img img-fluid" src="" alt="">
+                                    </a>
+                                    <p><a href="/cat/tai-nghe.html">Tai nghe</a></p>
+                                </div>
+                            </div>
+                            <div class="product__catagory--single">
+                                <div class="product__img-box product__img-box--catagory my_h_150 my_w_100">
+                                    <a href="/cat/tai-nghe.html" class="product__img--link">
+                                        <img class="product__img img-fluid" src="" alt="">
+                                    </a>
+                                    <p><a href="/cat/tai-nghe.html">Tai nghe</a></p>
+                                </div>
+                            </div>	
+                            <div class="product__catagory--single">
+                                <div class="product__img-box product__img-box--catagory my_h_150 my_w_100">
+                                    <a href="/cat/tai-nghe.html" class="product__img--link">
+                                        <img class="product__img img-fluid" src="" alt="">
+                                    </a>
+                                    <p><a href="/cat/tai-nghe.html">Tai nghe</a></p>
+                                </div>
+                            </div>	
+                            <div class="product__catagory--single">
+                                <div class="product__img-box product__img-box--catagory my_h_150 my_w_100">
+                                    <a href="/cat/tai-nghe.html" class="product__img--link">
+                                        <img class="product__img img-fluid" src="" alt="">
+                                    </a>
+                                    <p><a href="/cat/tai-nghe.html">Tai nghe</a></p>
+                                </div>
+                            </div>		
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- ::::::  End  Product Style - Catagory Section  ::::::  -->
+</section>
+
+<section id="bestSeller">
+	<!-- khối sp 1 -->
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<ul class="nav nav-tabs list-unstyled list-inline quickMenu" role="tablist">
+					<li class="active list-inline-item"><a href="#tab_Product1" id="tabProduct1" class="fz-sm-11 active" data-toggle="tab" role="tab">TẤT CẢ SẢN PHẨM</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="row tab-content" role="tablist" style="padding-top:20px">
+			<div id="tab_Product1" class="col-sm-12 tab-pane fade show active" role="tabpanel" aria-labelledby="tabProduct1">
+				<div id="productSlider1" class="row">
+                    <div class="product-item col-sm-3 col-md-3">
+                        <div class="numberSale">
+                            <div class="salePercent salePercent2">Hết hàng</div>
+                        </div>
+                                                            
+                        <div class="productImages">
+                            <a href="/product/tai-nghe-khong-day-airpod-2-rep-11.html">
+                                <img src="https://quanlydichvu.net/app/webroot/app/webroot/upload/6210b5892ac5dbf4318b4567/files/air_qgJ9J1g4.png" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="productInfo">
+                            <div class="productName">
+                                <h3><a href="/product/tai-nghe-khong-day-airpod-2-rep-11.html" class="fz-sm-14">Tai nghe không dây Airpod 2 rep 1:1</a></h3>
+                            </div>
+                            <div class="productPrice fz-sm-14"><del>544.000₫</del> 350.000₫</div>
+                        </div>
+                    
+                    </div>
+                    <div class="product-item col-sm-3 col-md-3">
+                        <div class="numberSale">
+                            <div class="salePercent salePercent2">Hết hàng</div>
+                        </div>
+                                                            
+                        <div class="productImages">
+                            <a href="/product/tai-nghe-khong-day-airpod-2-rep-11.html">
+                                <img src="https://quanlydichvu.net/app/webroot/app/webroot/upload/6210b5892ac5dbf4318b4567/files/air_qgJ9J1g4.png" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="productInfo">
+                            <div class="productName">
+                                <h3><a href="/product/tai-nghe-khong-day-airpod-2-rep-11.html" class="fz-sm-14">Tai nghe không dây Airpod 2 rep 1:1</a></h3>
+                            </div>
+                            <div class="productPrice fz-sm-14"><del>544.000₫</del> 350.000₫</div>
+                        </div>
+                    
+                    </div><div class="product-item col-sm-3 col-md-3">
+                        <div class="numberSale">
+                            <div class="salePercent salePercent2">Hết hàng</div>
+                        </div>
+                                                            
+                        <div class="productImages">
+                            <a href="/product/tai-nghe-khong-day-airpod-2-rep-11.html">
+                                <img src="https://quanlydichvu.net/app/webroot/app/webroot/upload/6210b5892ac5dbf4318b4567/files/air_qgJ9J1g4.png" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="productInfo">
+                            <div class="productName">
+                                <h3><a href="/product/tai-nghe-khong-day-airpod-2-rep-11.html" class="fz-sm-14">Tai nghe không dây Airpod 2 rep 1:1</a></h3>
+                            </div>
+                            <div class="productPrice fz-sm-14"><del>544.000₫</del> 350.000₫</div>
+                        </div>
+                    
+                    </div><div class="product-item col-sm-3 col-md-3">
+                        <div class="numberSale">
+                            <div class="salePercent salePercent2">Hết hàng</div>
+                        </div>
+                                                            
+                        <div class="productImages">
+                            <a href="/product/tai-nghe-khong-day-airpod-2-rep-11.html">
+                                <img src="https://quanlydichvu.net/app/webroot/app/webroot/upload/6210b5892ac5dbf4318b4567/files/air_qgJ9J1g4.png" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="productInfo">
+                            <div class="productName">
+                                <h3><a href="/product/tai-nghe-khong-day-airpod-2-rep-11.html" class="fz-sm-14">Tai nghe không dây Airpod 2 rep 1:1</a></h3>
+                            </div>
+                            <div class="productPrice fz-sm-14"><del>544.000₫</del> 350.000₫</div>
+                        </div>
+                    
+                    </div><div class="product-item col-sm-3 col-md-3">
+                        <div class="numberSale">
+                            <div class="salePercent salePercent2">Hết hàng</div>
+                        </div>
+                                                            
+                        <div class="productImages">
+                            <a href="/product/tai-nghe-khong-day-airpod-2-rep-11.html">
+                                <img src="https://quanlydichvu.net/app/webroot/app/webroot/upload/6210b5892ac5dbf4318b4567/files/air_qgJ9J1g4.png" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="productInfo">
+                            <div class="productName">
+                                <h3><a href="/product/tai-nghe-khong-day-airpod-2-rep-11.html" class="fz-sm-14">Tai nghe không dây Airpod 2 rep 1:1</a></h3>
+                            </div>
+                            <div class="productPrice fz-sm-14"><del>544.000₫</del> 350.000₫</div>
+                        </div>
+                    
+                    </div><div class="product-item col-sm-3 col-md-3">
+                        <div class="numberSale">
+                            <div class="salePercent salePercent2">Hết hàng</div>
+                        </div>
+                                                            
+                        <div class="productImages">
+                            <a href="/product/tai-nghe-khong-day-airpod-2-rep-11.html">
+                                <img src="https://quanlydichvu.net/app/webroot/app/webroot/upload/6210b5892ac5dbf4318b4567/files/air_qgJ9J1g4.png" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="productInfo">
+                            <div class="productName">
+                                <h3><a href="/product/tai-nghe-khong-day-airpod-2-rep-11.html" class="fz-sm-14">Tai nghe không dây Airpod 2 rep 1:1</a></h3>
+                            </div>
+                            <div class="productPrice fz-sm-14"><del>544.000₫</del> 350.000₫</div>
+                        </div>
+                    
+                    </div><div class="product-item col-sm-3 col-md-3">
+                        <div class="numberSale">
+                            <div class="salePercent salePercent2">Hết hàng</div>
+                        </div>
+                                                            
+                        <div class="productImages">
+                            <a href="/product/tai-nghe-khong-day-airpod-2-rep-11.html">
+                                <img src="https://quanlydichvu.net/app/webroot/app/webroot/upload/6210b5892ac5dbf4318b4567/files/air_qgJ9J1g4.png" alt="" class="img-fluid">
+                            </a>
+                        </div>
+                        <div class="productInfo">
+                            <div class="productName">
+                                <h3><a href="/product/tai-nghe-khong-day-airpod-2-rep-11.html" class="fz-sm-14">Tai nghe không dây Airpod 2 rep 1:1</a></h3>
+                            </div>
+                            <div class="productPrice fz-sm-14"><del>544.000₫</del> 350.000₫</div>
+                        </div>
+                    
+                    </div>
+
+				</div>
+				<div class="text-center">
+					<a href="/allProduct" class="viewMore">Xem thêm</a>
+				</div>
+			</div>
+		</div>			
+	</div>
+</section>
+
+
+<style>
+	.wr_account {
+		list-style-type: none;
+		padding-left: 0;
+		margin-top: 2rem;
+	}
+
+	.wr_account > li, .option_account{
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 10px;
+	}
+
+	.bor_t_1 {
+		border-top: 1px solid #212529;
+	}
+</style>
+	<footer style="margin-top: 15px;">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="displayChange justify-content-between">
+						<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 pd-sm-0 footLeft">
+							<div class="logoFoot">
+								<a href=""><img src="http://ms72.manmoweb.com/app/webroot/upload/admin/images/logo-tri-hoang-mobile.png" alt="" class="img-fluid"></a>
+							</div>
+							<div class="hotline">
+								<p>Hotline đặt hàng</p>
+								<span>0972848828</span>
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-4 col-lg-5 pd-set-0 pd-sm-0 footRight clsF_cl_center">
+							<p class="name_company fz-sm-11"></p>
+							<p class="fz-sm-11">Aptech Lê Thanh Nghị</p>
+							<p class="fz-sm-11">Email: thaianhdo2000@gmail.com</p>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 pd-sm-0 footRight clsF_cl_center">
+							<div class="displayChange">
+                                <a href="https://facebook.com"><img src="https://epizza.vn/app/webroot/upload/admin/images/fb.png" alt="" class="img-fluid"></a>
+                                <a href=""><img src="https://epizza.vn/app/webroot/upload/admin/images/now.png" alt="" class="img-fluid"></a>
+                                <a href=""><img src="https://epizza.vn/app/webroot/upload/admin/images/baemin.png" alt="" class="img-fluid"></a>
+                                <a href=""><img src="https://epizza.vn/app/webroot/upload/admin/images/unname.png" alt="" class="img-fluid"></a>
+                                <a href=""><img src="https://epizza.vn/app/webroot/upload/admin/images/shopee.png" alt="" class="img-fluid"></a>
+							</div>
+							<div class="footLink d-flex justify-content-between">
+								<ul class="list-unstyled w-md-50">
+                                    <li><a class="fz-sm-11" href="https://epizza.vn/gioi-thieu-ve-epizza.html">Về chúng tôi</a></li>
+                                    <li><a class="fz-sm-11" href="">Tài khoản</a></li>
+                                </ul>
+								<ul class="list-unstyled w-md-50">
+                                    <li><a class="fz-sm-11" href="https://epizza.manmoweb.com/contact">Liên hệ</a></li>
+                                    <li><a class="fz-sm-11" href="https://epizza.vn/quy-trinh-dat-hang-tren-epizza.html">Điều khoản</a></li>
+                                </ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="hotline-phone-ring-wrap">
+			<div class="hotline-phone-ring">
+				<div class="hotline-phone-ring-circle"></div>
+				<div class="hotline-phone-ring-circle-fill"></div>
+				<div class="hotline-phone-ring-img-circle">
+					<a href="tel:0856862838" class="pps-btn-img">
+						<img src="http://ms74.manmoweb.com/app/Theme/ms74//assets/images/icon-call-nh.png" alt="Gọi điện thoại" width="50">
+					</a>
+				</div>
+			</div>
+			<div class="hotline-bar">
+				<a href="tel:0856862838">
+					<span class="text-hotline">0972848828</span>
+				</a>
+			</div>
+		</div>
+
+		<div class="hotline-phone-ring-wrap1">
+			<div class="hotline-phone-ring1">
+				<div class="hotline-phone-ring-circle1"></div>
+				<div class="hotline-phone-ring-circle-fill1"></div>
+				<div class="hotline-phone-ring-img-circle">
+					<a target="_blank" href="https://www.facebook.com/Epizzavn" data-target="html" class="pps-btn-img1"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+				</div>
+			</div>
+		</div>
+		<div class="messAddCart">
+			<img src="https://epizza.vn/app/webroot/upload/admin/images/logoPizza.png" alt="">Đã thêm vào giỏ hàng.
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="http://ms74.manmoweb.com/app/Theme/ms74/assets/lib/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="http://ms74.manmoweb.com/app/Theme/ms74/assets/js/main.js"></script>
+	<script type="text/javascript" src="http://ms74.manmoweb.com/app/Theme/ms74/assets/js/ajaxform.js"></script>
+	<script type="text/javascript">
+		let options = {
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			autoplay: true,
+			autoplaySpeed: 3000,
+			infinite: true,
+			responsive: [
+			{
+				breakpoint: 800,
+				settings: {
+					slidesToShow: 1
+				}
+			},
+			{
+				breakpoint: 580,
+				settings: {
+					slidesToShow: 1
+				}
+			}
+			]
+		};
+
+		$(".carousel").slick(options);
+
+	</script>
+
+	<script>
+		function increaseCount(a, b) {
+	      var input = b.previousElementSibling;
+	      var value = parseInt(input.value, 10);
+	      value = isNaN(value) ? 0 : value;
+	      value++;
+	      input.value = value;
+	    }
+
+	    function decreaseCount(a, b) {
+	      var input = b.nextElementSibling;
+	      var value = parseInt(input.value, 10);
+	      if (value > 1) {
+	        value = isNaN(value) ? 0 : value;
+	        value--;
+	        input.value = value;
+	      }
+	    }
+
+	</script>
+	<!-- popup đăng ký -->
+	<div class="modal fade" id="loginForm" tabindex="-1" aria-labelledby="" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<div class="modal-body">
+					<ul id="formType" class="nav nav-tabs" role="tablist">
+						<li>
+							<a id="tab1" href="#login" class="active" data-toggle="tab" role="tab">Đăng nhập</a>
+						</li>
+						<li>
+							<a id="tab2" href="#signUp" class="" data-toggle="tab" role="tab">Tạo tài khoản</a>
+						</li>
+					</ul>
+
+
+					<div id="loginFormContent" class="tab-content" role="tablist">
+						<div id="login" class="tab-pane fade show active" role="tabpanel" aria-labelledby="tab1">
+							<form method="POST">
+								<div class="form-group">
+									<label for="loginEmail">Số điện thoại</label>
+									<input type="tel" name="phone" class="form-control" id="loginPhone">
+								</div>
+								<div class="form-group">
+									<label for="loginPassword">Mật khẩu</label>
+									<input type="password" autocomplete="off" name="pass" class="form-control" id="loginPassword">
+								</div>
+								<div><a href="/forgetPassword">Quên mật khẩu?</a></div>
+								<div style="color:red" id="messLogin"></div>
+								<div class="form-group btn-position">
+									<button type="submit" onclick="login('http://ms74.manmoweb.com/')" class="btnSubmit">Đăng nhập</button>
+									<button class="btnSubmit spin" type="button">Xin chờ &nbsp;<i class="fa fa-spinner" aria-hidden="true"> </i></button>
+								</div>
+							</form>
+							<!--
+							<div class="socialLogin">
+								<a href="#" class="d-flex justify-content-start">
+									<span class="iconify" data-icon="akar-icons:google-fill"></span>
+									<span>Đăng nhập bằng Google</span>
+								</a>
+								<a href="#" class="d-flex justify-content-start">
+									<span class="iconify" data-icon="cib:facebook"></span>
+									<span>Đăng nhập bằng Facebook</span>
+								</a>
+							</div>
+							-->
+						</div>
+
+						<div id="signUp" class="tab-pane fade" role="tabpanel" aria-labelledby="tab2">
+							<form action="/register" method="POST">
+								<div class="form-group">
+									<label for="signUpName">Họ và tên <span><span style="color:red">*</span></span></label>
+									<input type="text" name="cus_name" class="form-control" id="signUpName">
+								</div>
+								<div class="form-group">
+									<label for="signUpPhone">Số điện thoại <span><span style="color:red">*</span></span></label>
+									<input type="tel" name="phone" class="form-control" id="signUpPhone">
+								</div>
+								<div class="form-group">
+									<label for="signUpPhone">Ngày sinh</label>
+									<input type="text" name="birthday" class="form-control datepicker" id="signUpBirthDay" autocomplete="off">
+								</div>
+								<div class="form-group">
+									<label for="signUpEmail">Email <span><span style="color:red">*</span></span></label>
+									<input type="email" name="email" class="form-control" id="signUpEmail">
+								</div>
+								<div class="form-group">
+									<label for="signUpPassword">Mật khẩu <span><span style="color:red">*</span></span></label>
+									<input type="password" name="pass" autocomplete="off" class="form-control" id="signUpPassword">
+								</div>
+								<div class="form-group">
+									<label for="signUpRepassword">Xác nhận mật khẩu <span><span style="color:red">*</span></span></label>
+									<input type="password" name="passAgain" autocomplete="off" class="form-control" id="signUpRepassword">
+								</div>
+								<div style="color:red" id="messRegister"></div>
+								<div class="form-group btn-position">
+									<button type="submit" onclick="register('http://ms74.manmoweb.com/')" class="btnSubmit">Tạo tài khoản</button>
+									<button class="btnSubmit spin" type="button">Xin chờ &nbsp;<i class="fa fa-spinner" aria-hidden="true"> </i></button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Giỏ hàng mobile -->
+	<div class="modal fade" id="mobileCart" tabindex="-1" aria-labelledby="" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<div class="modal-body">
+					<div class="sb-fix sbCart dataCart">
+			            <div class="sbCartTitle d-flex justify-content-between">
+			                <div class="cartTitle">Giỏ hàng của bạn</div>
+			                <div>0 món</div>
+			            </div>
+			            <div class="productBought">Giỏ hàng của bạn đang chưa có gì, hãy chọn lấy một sản phẩm nào đó mà bạn thích</div>			        </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- popup tài khoản -->
+	<div class="modal fade" id="account" tabindex="-1" aria-labelledby="" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<div class="modal-body">
+					<ul class="wr_account">
+						<li>
+							<span>Tên tài khoản</span><span id="name_account"></span>
+						</li>
+						<li>
+							<span>Số điện thoại:</span><span id="phone_account"></span>
+						</li>
+						<li>
+							<span>Ngày sinh:</span><span id="birth_day"></span>
+						</li>
+						<li>
+							<span>Email:</span><span id="email_account"></span>
+						</li>
+						<li>
+							<span>Điểm thưởng:</span><span id="point_account"></span>
+						</li>
+					</ul>
+					<div class="option_account bor_t_1">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Thanh toán -->
+	<div class="modal fade" id="checkCart" tabindex="-1" aria-labelledby="" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<div class="modal-body">
+					<div class="pdInfo">
+						<h3>Thông tin nhận hàng</h3>
+					</div>
+					<div class="timeline-container">
+						<form method="POST">
+							<div class="form-group">
+								<label for="name_tt">Họ tên</label>
+								<input type="text" id="name_tt" maxlength="255" class="form-control" value="">
+							</div>
+							<div class="form-group">
+								<label for="phone_tt">Số điện thoại</label>
+								<input type="tel" maxlength="11" class="form-control" id="phone_tt" value="">
+							</div>
+							<div class="form-group">
+								<label for="email_tt">Email</label>
+								<input type="email" class="form-control" id="email_tt" value="">
+							</div>
+							<div class="form-group">
+								<label for="diachi_tt">Địa chỉ nhận hàng</label>
+								<input type="text" class="form-control" id="diachi_tt" value="">
+							</div>
+							<div class="form-group">
+								<label for="diachi_tt">Chọn cơ sở gần bạn:</label>
+								<select class="form-control" id="sellingPoint">
+									<option value="">Chọn cơ sở</option>
+																		<option  value="616310ae0cbee1e5668b4567">Long Biên Hà Nội</option>
+																		<option  value="6161b1a10cbee163788b4567">Lạc Thủy, Hòa Bình</option>
+																		<option  value="61435b280cbee15b788b4567">311 Trường Chinh</option>
+																	</select>
+							</div>
+							<div class="form-group">
+								<label for="note">Ghi chú</label>
+								<textarea id="note" style="width:100%" rows="3"></textarea>
+							</div>
+
+							<div style="color:red" id=""></div>
+						</form>
+					</div>
+					<div class="addToCart btn-position">
+						<a href="javascript:void(0);" onclick="thanhToan('','http://ms74.manmoweb.com/')">Hoàn thành</a>
+		                <a class="spin" href="javascript:void(0);">Xin chờ &nbsp;<i class="fa fa-spinner" aria-hidden="true"> </i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Alert Thanh toán -->
+	<div class="modal fade" id="billMess" tabindex="-1" aria-labelledby="" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<div class="modal-header">
+					<div class="pdInfo">
+						<h3>Thông báo</h3>
+					</div>
+				</div>
+				<div class="modal-body">
+					<p style="color:#da3032" id="alertMess" class="timeline-container">	
+					</p>
+										
+				</div>
+				<div style="display:block" class="modal-footer">
+					<div class="wr_QR">
+						<p>Bạn có thể thanh toán bằng:</p>
+						<ul id="" class="nav nav-tabs wr_tab_qr" role="tablist">
+																	<li>
+											<a id="adrTabPay0" href="#tabPay0" class="active" data-toggle="tab" role="tab">Ngân hàng ACB</a>
+										</li>
+																			<li>
+											<a id="adrTabPay1" href="#tabPay1" class="" data-toggle="tab" role="tab">Zalo Pay</a>
+										</li>
+																<li>
+								<a href="#tabPayCOD" id="adrTabPayCOD" data-toggle="tab" role="tab">COD</a>
+							</li>
+						</ul>
+
+						<div id="" class="tab-content" role="tablist">
+																	<div id="tabPay0" class="tab-pane fade show active" role="tabpanel" aria-labelledby="adrTabPay0">
+											<p></p>
+											<p>Nội dung thanh toán: 
+												<span>Trí Hoàng Mobile <span class="alertCode"></span></span>
+											</p>
+											<div>
+												<img style="max-width:220px" src="https://epizza.manmoweb.com/app/webroot/upload/admin/files/QR%20ACB.jpg" alt="">
+											</div>
+										</div>
+																			<div id="tabPay1" class="tab-pane fade " role="tabpanel" aria-labelledby="adrTabPay1">
+											<p></p>
+											<p>Nội dung thanh toán: 
+												<span>Trí Hoàng Mobile <span class="alertCode"></span></span>
+											</p>
+											<div>
+												<img style="max-width:220px" src="https://epizza.manmoweb.com/app/webroot/upload/admin/files/z2729378170600_ebb7d59a98f39c9aec0122c7fefbd981.jpg" alt="">
+											</div>
+										</div>
+																<div id="tabPayCOD" class="tab-pane fade" role="tabpanel" aria-labelledby="adrTabPayCOD">
+								<div style="min-height:220px;padding-top:20px">
+									Bạn sẽ thanh toán khi nhận được hàng.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end modal -->
+
+<script type="text/javascript">
+			var listIDAttributes= ["6210bd292ac5dbe0568b456c","6270e8ca2ac5dbde088b456b"];
+		</script></body>
+<script type="text/javascript" src="http://ms74.manmoweb.com/app/Theme/ms74/assets/lib/bootstrap-4.3.1-dist/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript">
+	$( ".datepicker" ).datepicker({
+	    dateFormat: 'dd/mm/yy'
+	});
+</script>
+</html>
